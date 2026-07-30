@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nandhini StyleHub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="navbar">Nandhini StyleHub</div>
+
+  <!-- 1. HOME PAGE -->
+  <section id="homePage" class="page active">
+    <h2>Best collections for everyone</h2>
+    <div class="category-grid">
+      <div class="category-card" onclick="showCategory('mens')">
+        <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400" alt="Mens">
+        <h3>Men's Wear</h3>
+      </div>
+
+      <div class="category-card" onclick="showCategory('womens')">
+        <img src="women's wear.jpg" alt="Womens">
+        <h3>Women's Wear</h3>
+      </div>
+
+      <div class="category-card" onclick="showCategory('kids')">
+        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400" alt="Kids">
+        <h3>Kids Wear</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. CATEGORY PAGE - Ithu la dhaan shirt photos varum -->
+  <section id="categoryPage" class="page">
+    <button class="backBtn" onclick="showPage('homePage')">← Back</button>
+    <h2 id="categoryTitle"></h2>
+    <div id="categoryProducts" class="product-grid"></div>
+  </section>
+
+  <!-- 3. CART PAGE -->
+  <section id="cartPage" class="page">
+    <button class="backBtn" onclick="showPage('homePage')">← Back</button>
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+    <div class="bill-box">
+      <p>Subtotal: ₹<span id="subtotal">0</span></p>
+      <p>Discount 10%: ₹<span id="discount">0</span></p>
+      <h3>Total: ₹<span id="total">0</span></h3>
+      <button>Checkout</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
